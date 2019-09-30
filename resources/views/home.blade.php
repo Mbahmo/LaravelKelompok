@@ -28,4 +28,21 @@
     </div>
     <button type="submit" class="btn btn-default">Submit</button>
   </form>
+  <div class="table-responsive">
+    <table class="table table-striped" style="background:#fff;margin-top:20px;">
+        <thead>
+            <th>Name</th>
+            <th>Email</th>
+        </thead>
+        <tbody>
+            @foreach ($users as $user)
+                <tr>
+                    <td>{{ $user->name }}</td>
+                    <td>{{ $user->email }}</td>
+                </tr>
+            @endforeach
+         </tbody>
+    </table>
+  </div>
+  {{ $users->links() }}
 @stop
