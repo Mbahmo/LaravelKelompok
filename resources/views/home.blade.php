@@ -35,12 +35,14 @@
             <th>Email</th>
         </thead>
         <tbody>
-            @foreach ($users as $user)
-                <tr>
-                    <td>{{ $user->name }}</td>
-                    <td>{{ $user->email }}</td>
-                </tr>
-            @endforeach
+            @if($users)
+                @foreach ($users as $user)
+                    <tr>
+                        <td>{{ $user->name }}</td>
+                        <td>{{ $user->email }}</td>
+                    </tr>
+                @endforeach
+            @endif
          </tbody>
     </table>
   </div>
