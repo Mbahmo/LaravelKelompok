@@ -12,5 +12,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         factory('App\User', 100)->create();
+        $this->call(kategoriTableSeeder::class);
     }
 }

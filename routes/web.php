@@ -19,3 +19,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/layout', 'BladeLayoutController@index');
+
+
+Route::resource('/produk', 'produkController');
